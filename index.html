@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | CleaNor</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: #828080"></canvas>
+    <script src="Build/TestBuilds.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/TestBuilds.data",
+        frameworkUrl: "Build/TestBuilds.framework.js",
+        codeUrl: "Build/TestBuilds.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "CleaNor",
+        productName: "CleaNor",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+      import { } from "firebase/auth";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCcdGl6dPSdDi28Bs0XjZleqKQWHjhxrOI",
+        authDomain: "cleanor-test.firebaseapp.com",
+        projectId: "cleanor-test",
+        storageBucket: "cleanor-test.appspot.com",
+        messagingSenderId: "38962533923",
+        appId: "1:38962533923:web:2f31876f845e6e460d8396"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
